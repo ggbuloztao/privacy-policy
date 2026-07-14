@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Privacy policies for browser extensions."
+  >
+
+  <title>Privacy Policies</title>
+
+  <style>
+    :root {
+      --ink: #111111;
+      --paper: #f4efe6;
+      --line: rgba(17, 17, 17, 0.18);
+      --muted: #67625b;
+      --highlight: #ff5c35;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding: 18px 28px;
+
+      background: rgba(244, 239, 230, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .hero {
+      min-height: 58vh;
+      padding: 72px 28px 54px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-label {
+      margin: 0 0 18px;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+
+      color: var(--highlight);
+    }
+
+    h1 {
+      max-width: 1100px;
+      margin: 0;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: clamp(64px, 12vw, 170px);
+      line-height: 0.82;
+      letter-spacing: -0.08em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      margin: 34px 0 0;
+
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .directory {
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-row {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+
+      min-height: 155px;
+      padding: 24px 28px;
+
+      color: var(--ink);
+      text-decoration: none;
+
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+
+      transition:
+        color 180ms ease,
+        padding-left 180ms ease;
+    }
+
+    .policy-row::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+
+      background: var(--ink);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 180ms ease;
+    }
+
+    .policy-row:hover::before,
+    .policy-row:focus-visible::before {
+      transform: scaleY(1);
+    }
+
+    .policy-row:hover,
+    .policy-row:focus-visible {
+      color: var(--paper);
+      padding-left: 42px;
+      outline: none;
+    }
+
+    .policy-row > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .index {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--highlight);
+    }
+
+    .name {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: clamp(34px, 6vw, 78px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .arrow {
+      font-size: 22px;
+      transition: transform 180ms ease;
+    }
+
+    .policy-row:hover .arrow {
+      transform: translateX(7px);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding: 26px 28px 34px;
+
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .hero {
+        min-height: 48vh;
+        padding-top: 52px;
+      }
+
+      .policy-row {
+        grid-template-columns: 52px 1fr;
+        gap: 14px;
+        min-height: 126px;
+      }
+
+      .action {
+        grid-column: 2;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <span class="brand">Privacy Policy Index</span>
+
+    <a class="contact" href="mailto:tieukhai284981@gmail.com">
+      tieukhai284981@gmail.com
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-label">Browser Extension Privacy</p>
+
+      <h1>Policy<br>Archive</h1>
+
+      <p class="hero-copy">
+        Select a product to review its privacy policy,
+        requested permissions, and data-handling practices.
+      </p>
+    </section>
+
+    <section class="directory" aria-label="Available privacy policies">
+      <a class="policy-row" href="./microbioma/">
+        <span class="index">01</span>
+        <span class="name">MicroBioma</span>
+
+        <span class="action">
+          Open policy
+          <span class="arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a class="policy-row" href="./blinkbit/">
+        <span class="index">02</span>
+        <span class="name">BlinkBit</span>
+
+        <span class="action">
+          Open policy
+          <span class="arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a class="policy-row" href="./moodglyph/">
+        <span class="index">03</span>
+        <span class="name">MoodGlyph</span>
+
+        <span class="action">
+          Open policy
+          <span class="arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a class="policy-row" href="./dust-bloom-ceremony/">
+        <span class="index">04</span>
+        <span class="name">Dust Bloom Ceremony</span>
+
+        <span class="action">
+          Open policy
+          <span class="arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>Privacy information for browser extensions</span>
+    <span>All URL paths are lowercase</span>
+  </footer>
+</body>
+</html>
